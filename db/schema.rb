@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20180123091951) do
     t.string "difficulty"
     t.text "notes"
     t.string "martial_art"
-    t.string "type"
+    t.string "form_type"
   end
 
 end

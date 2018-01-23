@@ -15,8 +15,8 @@
               <%= f.text_area :notes%><br />
               <%= f.label :martial_art %>
               <%= f.select :martial_art, [['Karate','Karate'],['Taekwondo','Taekwondo'],['KungFu','KungFu'],['Kickboxing','Kickboxing']] %>
-              <%= f.label :type %>
-              <%= f.select :type, [['Self-Defense','Self-Defense'],['Kata','Kata'],['Weapon','Weapon'],['Mass Attack','Mass Attack']] %>
+              <%= f.label :form_type %>
+              <%= f.select :form_type, [['Self-Defense','Self-Defense'],['Kata','Kata'],['Weapon','Weapon'],['Mass Attack','Mass Attack']] %>
               <br>
               <%= f.submit class: "btn span3 btn-realto-form btn-large" %>
             <% end %>

@@ -10,7 +10,7 @@ class InitialSchema < ActiveRecord::Migration[5.1]
 	  		t.string :difficulty
 	  		t.text :notes
 	  		t.string :martial_art
-	  		t.string :type
+	  		t.string :form_type
 	  	end
 
   	end

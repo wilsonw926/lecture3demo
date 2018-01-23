@@ -1,3 +1,14 @@
 <h3>Welcome to KarateApp</h3>
 
 <p><%= link_to "Add a Technique", new_technique_path %></p>
+
+<% @all_techniques.each do |t| %>
+	<br>
+	Name: <%= t.name %>
+	Difficulty: <%= t.difficulty %>
+	Notes: <%= t.notes %>
+	Martial Art: <%= t.martial_art %>
+	Form Type: <%= t.form_type %>
+	<%= button_to "Delete", delete_path(id: t.id), :class => "button medium", :method => :patch %>
+	</br>
+<%end%>
