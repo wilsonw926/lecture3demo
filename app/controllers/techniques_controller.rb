@@ -1,0 +1,5 @@
+class TechniquesController < ApplicationController
+
+
+	
+end
