@@ -5,12 +5,10 @@
         <div class="widget pull-right">
           <div class="row">
             <div class="span12 head-container">
-									
-							<h3>Welcome to KarateApp</h3>
-
-							<p><%= link_to "Add a Technique", new_technique_path, class: "btn btn-large btn-realto " %></p>
 
 							<h3><center>Featured Techniques</center></h3>
+
+							<p><%= link_to "Add a Technique", new_technique_path, class: "btn btn-large btn-realto " %></p>
 
 							<div class="TechniqueBox">
 								<% @all_techniques.each do |t| %>
