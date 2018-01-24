@@ -1,14 +1,33 @@
-<h3>Welcome to KarateApp</h3>
+<div id="home-search-container">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <div class="widget pull-right">
+          <div class="row">
+            <div class="span12 head-container">
+									
+							<h3>Welcome to KarateApp</h3>
 
-<p><%= link_to "Add a Technique", new_technique_path %></p>
+							<p><%= link_to "Add a Technique", new_technique_path, class: "btn btn-large btn-realto " %></p>
 
-<% @all_techniques.each do |t| %>
-	<br>
-	Name: <%= t.name %>
-	Difficulty: <%= t.difficulty %>
-	Notes: <%= t.notes %>
-	Martial Art: <%= t.martial_art %>
-	Form Type: <%= t.form_type %>
-	<%= button_to "Delete", delete_path(id: t.id), :class => "button medium", :method => :patch %>
-	</br>
-<%end%>
+							<h3><center>Featured Techniques</center></h3>
+
+							<% @all_techniques.each do |t| %>
+								<br>
+								Name: <%= t.name %><br>
+								Difficulty: <%= t.difficulty %><br>
+								Notes: <%= t.notes %><br>
+								Martial Art: <%= t.martial_art %><br>
+								Form Type: <%= t.form_type %><br>
+								<iframe src='https://www.youtube.com/embed/<%= YouTubeAddy.extract_video_id(t.link) %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+								<%= button_to "Delete", delete_path(id: t.id), class: "btn btn-medium btn-realto ", :method => :patch %>
+								</br>
+							<%end%>
+								
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20180123091951) do
     t.text "notes"
     t.string "martial_art"
     t.string "form_type"
+    t.string "link"
   end
 
 end

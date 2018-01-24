@@ -10,4 +10,4 @@ red = Belt.where(color: "Red").first_or_create(color: "Red")
 black = Belt.where(color: "Black").first_or_create(color: "Black")
 
 #------- TECHNIQUE SECTION -------
-Technique.where(name: "Kata 1").first_or_create(name: "Kata 1", difficulty: "Beginner", notes: "First kata", martial_art: "Karate", form_type: "Kata")
+Technique.where(name: "Broadsword").first_or_create(name: "Broadsword", difficulty: "Expert", notes: "Black Belt Weapon", martial_art: "KungFu", form_type: "Weapon", link: "https://www.youtube.com/watch?v=pyu8SrZYHZE")

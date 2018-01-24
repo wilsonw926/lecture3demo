@@ -11,6 +11,7 @@ class InitialSchema < ActiveRecord::Migration[5.1]
 	  		t.text :notes
 	  		t.string :martial_art
 	  		t.string :form_type
+	  		t.string :link
 	  	end
 
   	end
