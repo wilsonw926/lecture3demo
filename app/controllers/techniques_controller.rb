@@ -31,7 +31,7 @@ class TechniquesController < ApplicationController
 
   private
     def technique_params
-      params.require(:technique).permit(:name, :difficulty, :notes, :martial_art, :form_type, :link)
+      params.require(:technique).permit(:name, :difficulty, :notes, :martial_art, :form_type, :link, :belt_color)
     end
 
 end

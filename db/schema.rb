@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180123091951) do
-
-  create_table "belts", force: :cascade do |t|
-    t.string "color"
-  end
+ActiveRecord::Schema.define(version: 20180124102118) do
 
   create_table "techniques", force: :cascade do |t|
     t.string "name"
@@ -23,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180123091951) do
     t.string "martial_art"
     t.string "form_type"
     t.string "link"
+    t.string "belt_color"
   end
 
 end
