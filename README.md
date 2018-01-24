@@ -5,3 +5,6 @@ Add techniques, which consists of a name, difficulty level, notes, martial arts 
 Gems used:
 youtube_addy 1.0.4
 https://github.com/datwright/youtube_addy
+
+Homepage:
+![alt text](Homepage.png)
