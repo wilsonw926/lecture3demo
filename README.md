@@ -1,24 +1,7 @@
-# README
+# KarateApp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Add techniques, which consists of a name, difficulty level, notes, martial arts style, form type, and also a link to the youtube demo video. Also provides option of delting the technique.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Gems used:
+youtube_addy 1.0.4
+https://github.com/datwright/youtube_addy
