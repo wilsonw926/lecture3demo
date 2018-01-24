@@ -12,18 +12,19 @@
 
 							<h3><center>Featured Techniques</center></h3>
 
-							<% @all_techniques.each do |t| %>
-								<br>
-								Name: <%= t.name %><br>
-								Difficulty: <%= t.difficulty %><br>
-								Notes: <%= t.notes %><br>
-								Martial Art: <%= t.martial_art %><br>
-								Form Type: <%= t.form_type %><br>
-								<iframe src='https://www.youtube.com/embed/<%= YouTubeAddy.extract_video_id(t.link) %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
-								<%= button_to "Delete", delete_path(id: t.id), class: "btn btn-medium btn-realto ", :method => :patch %>
-								</br>
-							<%end%>
-								
+							<div class="TechniqueBox">
+								<% @all_techniques.each do |t| %>
+									<br>
+									Name: <%= t.name %><br>
+									Difficulty: <%= t.difficulty %><br>
+									Notes: <%= t.notes %><br>
+									Martial Art: <%= t.martial_art %><br>
+									Form Type: <%= t.form_type %><br>
+									<iframe src='https://www.youtube.com/embed/<%= YouTubeAddy.extract_video_id(t.link) %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+									<%= button_to "Delete", delete_path(id: t.id), class: "btn btn-medium btn-realto ", :method => :patch %>
+									</br>
+								<%end%>
+							</div>	
 						</div>
 					</div>
 				</div>

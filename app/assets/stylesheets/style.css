@@ -420,11 +420,11 @@ a.overlay:hover .more {
 	background: rgba(255,255,255,0.85);*/
 	background-color: white;
     background-size: 100%;
+    padding-left: 30px;
 }
 
-.head-container .search-form {
+.head-container .TechniqueBox {
 	border: none;
-	padding-top: 30px;
 }
 
 .search-form-wrapper {
