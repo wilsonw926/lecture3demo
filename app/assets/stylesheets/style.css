@@ -38,8 +38,10 @@ h2 {
 	color: #363636;
 }
 h3 {
-	font-size: 18px;
+	font-size: 28px;
 	font-weight: 200;
+	font-family: 'Karate';
+	src: url('http://domain.com/fonts/karate.ttf');
 	line-height: 22px;
 	text-transform: uppercase;
 	margin: 20px 0;
