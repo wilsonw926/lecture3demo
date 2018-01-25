@@ -167,6 +167,7 @@ header {
 }
 
 #logo-container {
+	background-color: #f4d1a4;
 	padding: 25px 0 22px;
 }
 a.brand {
@@ -176,6 +177,7 @@ a.brand {
     color: #363636;
 }
 .tag-line {
+	color: #363636;
 	margin: 0 0 0 20px;
 	padding: 0 0 0 20px;
 	border-left: 1px solid #333;
