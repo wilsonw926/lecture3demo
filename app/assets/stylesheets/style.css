@@ -41,11 +41,11 @@ h3 {
 	font-size: 28px;
 	font-weight: 200;
 	font-family: 'Karate';
-	src: url('http://domain.com/fonts/karate.ttf');
+	src: url('https://www.dafont.com/karate.font');
 	line-height: 22px;
 	text-transform: uppercase;
 	margin: 20px 0;
-	color: #363636;
+	color: black;
 }
 h4 {
 	font-size: 16px;
@@ -423,6 +423,11 @@ a.overlay:hover .more {
 	background: url('dojobackground.png');
     background-size: 100%;
     padding-left: 30px;
+}
+
+.head-container .TButton {
+	text-align: center;
+	padding-bottom: 20px;
 }
 
 .head-container .TechniqueBox {

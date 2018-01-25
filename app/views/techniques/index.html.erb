@@ -6,7 +6,9 @@
 
 							<h3><center>Featured Techniques</center></h3>
 
-							<p><%= link_to "Add a Technique", new_technique_path, class: "btn btn-large btn-realto " %></p>
+							<div class="TButton">
+								<p><%= link_to "Add a Technique", new_technique_path, class: "btn btn-large btn-realto " %></p>
+							</div>
 
 							<div class="TechniqueBox">
 								<table width="80%">
@@ -17,11 +19,19 @@
 								  			<div class="MiniBox">
 								        	Name: <%= t.name %><br>
 													Difficulty: <%= t.difficulty %><br>
-													Notes: <%= t.notes %><br>
+													<% if t.notes != "" %>
+														Notes: <%= t.notes %><br>
+													<%else%>
+														Notes: NONE<br>
+													<%end%>
 													Martial Art: <%= t.martial_art %><br>
 													Form Type: <%= t.form_type %><br>
 													Belt Level: <%= t.belt_color %><br>
-													<iframe src='https://www.youtube.com/embed/<%= YouTubeAddy.extract_video_id(t.link) %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+													<% if t.link != "" %>
+														<iframe src='https://www.youtube.com/embed/<%= YouTubeAddy.extract_video_id(t.link) %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+													<%else%>
+														<img src="http://euonthemove.eu/wp-content/uploads/2017/05/no-video.jpg" height="285" width="285">
+													<%end%>
 													<%= button_to "Delete", delete_path(id: t.id), class: "btn btn-medium btn-realto ", :method => :patch %>
 												</div>
 												</td>
