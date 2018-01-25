@@ -428,7 +428,13 @@ a.overlay:hover .more {
 .head-container .TechniqueBox {
 	border: none;
 	color: black;
+	width: 120%;
+   	margin: 0 auto;
 }	
+
+.head-container .MiniBox {
+	padding-left: 40px;
+}
 
 .search-form-wrapper {
 	position: absolute;
