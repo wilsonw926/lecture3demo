@@ -19,7 +19,7 @@
 								       <% row.each do |t| %>
 								        <td>
 								  			<div class="MiniBox">
-								        	Name: <%= t.name %><br>
+								        	<strong>Name: <%= t.name %></strong><br>
 													Difficulty: <%= t.difficulty %><br>
 													<% if t.notes != "" %>
 														Notes: <%= t.notes %><br>
@@ -30,7 +30,7 @@
 													Form Type: <%= t.form_type %><br>
 													Belt Level: <%= t.belt_color %><br>
 													<% if t.link != "" %>
-														<iframe src='https://www.youtube.com/embed/<%= YouTubeAddy.extract_video_id(t.link) %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+														<center><iframe src='https://www.youtube.com/embed/<%= YouTubeAddy.extract_video_id(t.link) %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe></center>
 													<%else%>
 														<img src="http://euonthemove.eu/wp-content/uploads/2017/05/no-video.jpg" height="285" width="285">
 													<%end%>
