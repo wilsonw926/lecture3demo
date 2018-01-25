@@ -433,12 +433,16 @@ a.overlay:hover .more {
 .head-container .TechniqueBox {
 	border: none;
 	color: black;
-	width: 120%;
+	width: 110%;
    	margin: 0 auto;
 }	
 
 .head-container .MiniBox {
-	padding-left: 40px;
+	
+	padding: 15px 15px;
+	padding-bottom: 0px;
+	padding-right: 10px;
+	background-color: rgba(255,255,255,0.7);
 }
 
 .search-form-wrapper {

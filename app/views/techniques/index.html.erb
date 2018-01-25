@@ -4,7 +4,8 @@
         <div class="widget pull-right">
             <div class="span12 head-container">
 
-							<h3><center>Featured Techniques</center></h3>
+							<h3><center><img src="http://www.pumakarate.org/sites/all/themes/athlete/images/KarateBanner2.png" height="285" width="285"> &nbsp;&nbsp;&nbsp;&nbsp;Featured Techniques&nbsp;&nbsp;&nbsp;&nbsp; <img src="http://www.pumakarate.org/sites/all/themes/athlete/images/KarateBanner2.png" height="285" width="285"></center></h3>
+
 
 							<div class="TButton">
 								<p><%= link_to "Add a Technique", new_technique_path, class: "btn btn-large btn-realto " %></p>
@@ -13,6 +14,7 @@
 							<div class="TechniqueBox">
 								<table width="80%">
 								  <% @all_techniques.each_slice(3) do |row| %>
+								    <table cellpadding="20">
 								    <tr> 
 								       <% row.each do |t| %>
 								        <td>
@@ -32,6 +34,8 @@
 													<%else%>
 														<img src="http://euonthemove.eu/wp-content/uploads/2017/05/no-video.jpg" height="285" width="285">
 													<%end%>
+													<br>
+													<%= link_to "Edit", edit_technique_path(id: t.id), class: "btn btn-medium btn-realto"%>
 													<%= button_to "Delete", delete_path(id: t.id), class: "btn btn-medium btn-realto ", :method => :patch %>
 												</div>
 												</td>

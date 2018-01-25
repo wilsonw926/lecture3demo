@@ -25,9 +25,19 @@ class TechniquesController < ApplicationController
 	    end
   	end
 
-  def show
-    @technique = Technique.find(params[:id])
-  end
+  	def edit
+    	@technique = Technique.find(params[:id])
+  	end
+
+  	def update
+	    @technique = Technique.find(params[:id])
+	    @technique.update(technique_params)
+	    redirect_to root_path
+	  end
+
+	def show
+		@technique = Technique.find(params[:id])
+	end
 
   private
     def technique_params
