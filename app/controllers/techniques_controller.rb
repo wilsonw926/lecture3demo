@@ -8,38 +8,22 @@ class TechniquesController < ApplicationController
 		@technique = Technique.new
 	end
 
-	def delete
+	def create
+	    @technique = Technique.new(technique_params)
+	    if @technique.save
+	      redirect_to root_path
+	    else
+	      redirect_to new_technique_path
+	    end
+  	end
+
+  	def delete
 		@technique = Technique.find(params[:id])
 		@technique.delete
 		redirect_to root_path
 	end
 
-	def create
-	    @technique = Technique.new(technique_params)
-	    if @technique.save
-	      flash['success'] = 'Technique has been created succesfully.'
-	      redirect_to root_path
-	    else
-	      flash[:error] = @technique.errors.full_messages.to_sentence
-	      redirect_to new_technique_path
-	    end
-  	end
-
-  	def edit
-    	@technique = Technique.find(params[:id])
-  	end
-
-  	def update
-	    @technique = Technique.find(params[:id])
-	    @technique.update(technique_params)
-	    redirect_to root_path
-	  end
-
-	def show
-		@technique = Technique.find(params[:id])
-	end
-
-  private
+  	private
     def technique_params
       params.require(:technique).permit(:name, :difficulty, :notes, :martial_art, :form_type, :link, :belt_color)
     end

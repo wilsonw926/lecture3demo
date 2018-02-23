@@ -1,54 +1,21 @@
-<div id="home-search-container">
-  <div class="container">
-    <div class="row">
-        <div class="widget pull-right">
-            <div class="span12 head-container">
 
-							<h3><center><img src="http://www.pumakarate.org/sites/all/themes/athlete/images/KarateBanner2.png" height="285" width="285"> &nbsp;&nbsp;&nbsp;&nbsp;Featured Techniques&nbsp;&nbsp;&nbsp;&nbsp; <img src="http://www.pumakarate.org/sites/all/themes/athlete/images/KarateBanner2.png" height="285" width="285"></center></h3>
+<p><%= link_to "Add a Technique", new_technique_path, class: "btn btn-large btn-realto " %></p>
 
+<% @all_techniques.each do |t| %>
 
-							<div class="TButton">
-								<p><%= link_to "Add a Technique", new_technique_path, class: "btn btn-large btn-realto " %></p>
-							</div>
+	Name: <%= t.name %><br>
 
-							<div class="TechniqueBox">
-								<table width="80%">
-								  <% @all_techniques.each_slice(3) do |row| %>
-								    <table cellpadding="20">
-								    <tr> 
-								       <% row.each do |t| %>
-								        <td>
-								  			<div class="MiniBox">
-								        	<strong>Name: <%= t.name %></strong><br>
-													Difficulty: <%= t.difficulty %><br>
-													<% if t.notes != "" %>
-														Notes: <%= t.notes %><br>
-													<%else%>
-														Notes: NONE<br>
-													<%end%>
-													Martial Art: <%= t.martial_art %><br>
-													Form Type: <%= t.form_type %><br>
-													Belt Level: <%= t.belt_color %><br>
-													<% if t.link != "" %>
-														<center><iframe src='https://www.youtube.com/embed/<%= YouTubeAddy.extract_video_id(t.link) %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe></center>
-													<%else%>
-														<img src="http://euonthemove.eu/wp-content/uploads/2017/05/no-video.jpg" height="285" width="285">
-													<%end%>
-													<br>
-													<%= link_to "Edit", edit_technique_path(id: t.id), class: "btn btn-medium btn-realto"%>
-													<%= button_to "Delete", delete_path(id: t.id), class: "btn btn-medium btn-realto ", :method => :patch %>
-												</div>
-												</td>
-								       <% end %>
-								    </tr>
-								  <% end %>
-								</table>
-							</div>	
+	Difficulty: <%= t.difficulty %><br>
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+	<% if t.notes != "" %>
+		Notes: <%= t.notes %><br>
+	<%else%>
+		Notes: NONE<br>
+	<%end%>
+
+	Martial Art: <%= t.martial_art %><br>
+	Form Type: <%= t.form_type %><br>
+	Belt Color: <%= t.belt_color %><br>
+
+<% end %>		
+								
